@@ -1738,6 +1738,13 @@ copy_file_file (file_op_total_context_t * tctx, file_op_context_t * ctx,
     appending = ctx->do_append;
     ctx->do_append = FALSE;
 
+    /* Try clone the file first */
+    if (vfs_clone_file(dest_desc,src_desc) == 0)
+    {
+        dst_status = DEST_FULL;
+        goto ret;
+    }
+
     /* Find out the optimal buffer size.  */
     while (mc_fstat (dest_desc, &dst_stat) != 0)
     {
