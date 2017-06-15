@@ -229,7 +229,7 @@ include nemerle.syntax
 file ..\*\\.[vV]$ Verilog\sDevice\sDescription
 include verilog.syntax
 
-file ..\*\\.(hdl|vhd|vdhl|HDL|VHD|VHDL)$ VHDL\sDevice\sDescription
+file ..\*\\.(hdl|vhd|vhdl|HDL|VHD|VHDL)$ VHDL\sDevice\sDescription
 include vhdl.syntax
 
 file ..\*\\.erl$ Erlang\sProgram ^(-module\\(|#!.*escript)
