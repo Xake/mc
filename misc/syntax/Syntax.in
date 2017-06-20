@@ -25,7 +25,7 @@
 file [Ss]yntax$ Syntax\sHighlighting\sdefinitions ^#\ssyntax\srules\sversion\s
 include syntax.syntax
 
-file filehighlight.ini$ File\sHighlighting\sdefinitions ^#\sfile\shighlight\srules\sversion\s
+file filehighlight\\.ini$ File\sHighlighting\sdefinitions ^#\sfile\shighlight\srules\sversion\s
 include filehighlight.syntax
 
 file ..\*\\.e$ Eiffel\sSource\sFile
@@ -58,7 +58,7 @@ include nroff.syntax
 file ..\*\\.(?i:html?)$ HTML\sFile
 include html.syntax
 
-file ..\*\\.((?i:xml|xsd|xslt?|dtd)|qpg|qpg.in)$ XML\sdocument (\\?xml\sversion|!DOCTYPE\s)
+file ..\*\\.((?i:xml|xsd|xslt?|dtd)|qpg|qpg\\.in)$ XML\sdocument (\\?xml\sversion|!DOCTYPE\s)
 include xml.syntax
 
 file ..\*\\.(?i:tt)$ Template::Toolkit\sFile
@@ -91,7 +91,7 @@ include texinfo.syntax
 file ..\*\\.c$ C\sProgram
 include c.syntax
 
-file ..\*\\.([hC]|(?i:cxx|cc|cpp|hpp)|hxx|hh|h\\.in)$ C/C\+\+\sProgram
+file ..\*\\.([hC]|(?i:cxx|cc|cpp|hpp|hxx|hh)|[Hh]\\.in)$ C/C\+\+\sProgram
 include cxx.syntax
 
 file ..\*\\.d$ D\sProgram
@@ -217,7 +217,7 @@ include debian-changelog.syntax
 file ..\*\\.dsc$ Debian\sdescriptiom\sfile
 include debian-description.syntax
 
-file ..\*\\.(?:hsc?)$ Haskell\sprogram
+file ..\*\\.(?i:hsc?)$ Haskell\sprogram
 include haskell.syntax
 
 file ..\*\\.(?i:cabal)$ Cabal\sconfig\sfile
